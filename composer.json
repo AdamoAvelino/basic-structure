@@ -1,0 +1,22 @@
+{
+    "name": "quaestum/quaestum",
+    "description": "Estrutura básica de projeto da quaestum",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Adamo Avelino",
+            "email": "adamo.avelino@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "slim/slim": "2.6.3",
+        "twig/twig": "^1.27",
+        "vlucas/phpdotenv": "^5.4@dev"
+    }
+}

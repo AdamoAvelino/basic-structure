@@ -1,0 +1,11 @@
+{% extends "layout/main.html" %}
+
+{% block title %}Cadastro de Usuários{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    <h1>Bem Vindo a página inicial</h1>
+    {{usuarios | var_dump}}
+{% endblock %}
