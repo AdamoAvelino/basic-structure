@@ -2,6 +2,7 @@
     "name": "quaestum/quaestum",
     "description": "Estrutura básica de projeto da quaestum",
     "type": "project",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Adamo Avelino",
