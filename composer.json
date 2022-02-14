@@ -1,7 +1,7 @@
 {
     "name": "quaestum/quaestum",
     "description": "Estrutura básica de projeto da quaestum",
-    "type": "library",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {
