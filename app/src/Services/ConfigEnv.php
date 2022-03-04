@@ -6,7 +6,7 @@ class ConfigEnv
 {
     public function __construct()
     {
-        $env = \Dotenv\Dotenv::createImmutable(__DIR__.'/../../../config');
+        $env = \Dotenv\Dotenv::createImmutable(__DIR__.'/../../../');
         $env->load();
         
     }
