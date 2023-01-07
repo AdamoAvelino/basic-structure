@@ -4,32 +4,33 @@ namespace App\Controllers;
 
 
 use Slim\Http\Request;
+use App\Controllers\Controller;
 use App\Models\Usuarios;
 use App\src\Database\ConnectDB;
 
-class Home 
+class Home extends Controller
 {
-    public function index($app)
+    public function index()
     {
-        $app->render('BemVindo');
+        $this->app->render('BemVindo');
     }
 
-    public function listar($app)
+    public function listar()
     {
         $usuarios = new Usuarios();
         $listaUsuarios = $usuarios->getAll();
         $dados = ['usuarios' => $listaUsuarios];
-        $app->render('cadastrar', $dados);
+        $this->app->render('cadastrar', $dados);
 
     }
 
-    public function cadastrar($app) {
+    public function cadastrar() {
         ConnectDB::Transaction();
-        $dados = json_decode($app->request->getBody(), true);
+        $dados = json_decode($this->app->request->getBody(), true);
         $usuarios = new Usuarios();
         $usuarios->store($dados);
         ConnectDB::commit();
 
-        $this->listar($app);
+        $this->listar($this->app);
     }
 }

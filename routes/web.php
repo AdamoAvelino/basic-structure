@@ -11,8 +11,8 @@ $authi = function ($nome) {
     };
 };
 
-$app->get('/', $authi,  function() use ($app){
+$app->get('/', $authi,  function() {
     $home = new Home();
-    $home->index($app);
+    $home->index();
 });
 
