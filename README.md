@@ -28,14 +28,14 @@ arquivo usuario.php
 <?php
 use App\Controllers\Home;
 
-$app->group('/api', function() use ($app) {
+$app->group('/api', function() {
     
-    $app->group('/v1', function() use ($app) {
+    $app->group('/v1', function() {
 
-        $app->group('/usuario', function() use ($app) {
-            $app->get('/', $authi,  function() use ($app){
+        $app->group('/usuario', function() {
+            $app->get('/', $authi,  function() {
                 $home = new Home();
-                $home->index($app);
+                $home->index();
             });
 
         });
