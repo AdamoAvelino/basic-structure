@@ -46,4 +46,26 @@ $app->group('/api', function() {
 
 ```
 
-Dentro da pasta app crie os controllers e brinque o quanto necessário
+Dentro da pasta app crie os controllers e brinque o quanto necessário.
+
+Para criar um controller é bem simples:
+Crie um arquivo de controller dentro da pasta App/Controllers.
+Exepmlo da criação do de Home.php:
+ ```
+ namespace App\Controllers;
+
+/** 
+ * Utilize a classe Controller principal para extender a classe Home
+ * Essa seper classe oferece o atributo app que carrega a instancia do Slim.
+ * Assim conseguirá recuperar **requests**, utilizar **responses** ou o render do Twig que é instanciado no bootstrap da aplicação
+ */
+use App\Controllers\Controller;
+
+class Home extends Controller
+{
+    public function index()
+    {
+        $this->app->render('BemVindo');
+    }
+}
+ ```
