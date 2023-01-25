@@ -52,7 +52,7 @@ Para criar um controller é bem simples:
 Crie um arquivo de controller dentro da pasta App/Controllers.
 Exepmlo da criação do de Home.php:
 
- ```
+ ```PHP
  <?php
  namespace App\Controllers;
 
@@ -70,4 +70,4 @@ class Home extends Controller
         $this->app->render('BemVindo');
     }
 }
- ```
+```
