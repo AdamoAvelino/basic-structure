@@ -51,7 +51,9 @@ Dentro da pasta app crie os controllers e brinque o quanto necessário.
 Para criar um controller é bem simples:
 Crie um arquivo de controller dentro da pasta App/Controllers.
 Exepmlo da criação do de Home.php:
+
  ```
+ <?php
  namespace App\Controllers;
 
 /** 
