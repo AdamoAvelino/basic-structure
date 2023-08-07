@@ -2,6 +2,11 @@
 
 namespace App\src\Services;
 
+use Twig\TwigFunction;
+use Twig\TwigFilter;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
+use Twig\Extra\Intl\IntlExtension;
 class View extends \Slim\View
 {
 
