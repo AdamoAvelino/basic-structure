@@ -1,6 +1,6 @@
 {
-    "name": "quaestum/quaestum",
-    "description": "Estrutura básica de projeto da quaestum",
+    "name": "slim/skeleton-basic-work",
+    "description": "Estrutura básica para SLIM PHP MCV",
     "type": "project",
     "license": "MIT",
     "authors": [
