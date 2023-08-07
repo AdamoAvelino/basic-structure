@@ -15,6 +15,10 @@ class View extends \Slim\View
             'debug' => true,
         ]);
         $this->twig->addFilter(new \Twig\TwigFilter('var_dump', 'var_dump'));
+        $this->twig->addFunction(new TwigFunction('getFlash', 'getFlash'));
+        $session = isset($_SESSION) ? $_SESSION : [];
+        $this->twig->addGlobal('session', $session);
+        $this->twig->addExtension(new IntlExtension());
     }
 
     public function functions()
@@ -31,7 +35,7 @@ class View extends \Slim\View
     public function render($template, $data = null)
     {
         $this->load();
-        $template = $this->twig->loadTemplate(str_replace('.', '/', "{$template}").".html");
+        $template = $this->twig->load(str_replace('.', '/', "{$template}").".html");
 
         return $template->render($this->data->all());
 

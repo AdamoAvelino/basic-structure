@@ -18,8 +18,8 @@ class Home extends Controller
     public function listar()
     {
         $usuarios = new Usuarios();
-        $listaUsuarios = $usuarios->getAll();
-        $dados = ['usuarios' => $listaUsuarios];
+        $usuarios = $usuarios->select()->where('u.id', 1, '>')->get();
+        $dados = ['usuarios' => $usuarios];
         $this->app->render('cadastrar', $dados);
 
     }
@@ -28,7 +28,7 @@ class Home extends Controller
         ConnectDB::Transaction();
         $dados = json_decode($this->app->request->getBody(), true);
         $usuarios = new Usuarios();
-        $usuarios->store($dados);
+        $usuarios->cadastrar($dados);
         ConnectDB::commit();
 
         $this->listar($this->app);

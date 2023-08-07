@@ -18,7 +18,9 @@
     "prefer-stable": true,
     "require": {
         "slim/slim": "2.6.3",
-        "twig/twig": "^1.27",
-        "vlucas/phpdotenv": "^5.4@dev"
+        "twig/twig": "^3.0",
+        "vlucas/phpdotenv": "^5.4@dev",
+        "twig/intl-extra": "^3.6",
+        "phpmailer/phpmailer": "^6.8"
     }
 }
