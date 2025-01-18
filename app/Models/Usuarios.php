@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use App\src\Database\ConnectDB;
+use App\src\QueryBuild\QueryBuild;
 
-
-class Usuarios extends Qu
+class Usuarios extends QueryBuild
 {
     private $conn;
 
